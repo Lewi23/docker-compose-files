@@ -1,0 +1,15 @@
+# Use lewis/helloworld as user/password credentials
+version: '3.1'
+
+services:
+
+  db:
+    image: mysql:latest
+    environment:
+      - MYSQL_USER=lewis
+      - MYSQL_PASSWORD=helloworld
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - 3306:3306
+    expose:
+      - "3306"
